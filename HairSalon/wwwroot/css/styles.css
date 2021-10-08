@@ -1,3 +1,25 @@
 h1, h3 {
   text-align: center;
+  color:#403C23;
+  font-family: 'Staatliches', cursive;
+}
+
+h1{
+  font-size: 64px;
+}
+
+body {
+  background-image: url('/img/background.jpg');
+  background-repeat: no-repeat;
+  background-color: #CDA898;
+  background-size: cover;
+}
+
+.jumbotron {
+  border-radius: 15px;
+  box-shadow: inset -5px -30px 30px 2px #CDA898;
+}
+
+.btn {
+  align-items: center;
 }
