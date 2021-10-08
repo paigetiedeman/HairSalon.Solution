@@ -74,11 +74,11 @@ CREATE TABLE `clients` (
   PRIMARY KEY (`ClientId`)
 );
 ```
-* _In your terminal navigate into ProjectName.Solution/ProjectName_
+* _In your terminal navigate into HairSalon.Solution/HairSalon_
 * _Run `$ dotnet build` to build the site_
 * _Run `$ dotnet run` to start the live server_
 * _Click either button to add to see all stylists or clients_
-* _After clicking add item put in your inputs and hit submit to reveal the stylist list!_
+* _After clicking add stylist or client put in your inputs and hit submit to reveal the lists!_
 
 ## User Stories
 
