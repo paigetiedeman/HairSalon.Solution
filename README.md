@@ -66,7 +66,6 @@ DROP TABLE IF EXISTS `stylists`;
 CREATE TABLE `stylists` (
   `StylistId` int NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
-  `ClientId` int DEFAULT '0',
   PRIMARY KEY (`StylistId`)
 );
 DROP TABLE IF EXISTS `clients`;

@@ -8,6 +8,7 @@ namespace HairSalon.Controllers
 {
   public class ClientsController : Controller
   {
+    public readonly HairSalonContext _db;
     
   }
 }
