@@ -16,8 +16,6 @@
 #### This is a C# web application using MySQL databases and Entity to collect a list of Stylists and Clients.  
 
 <br>
-
-  <!-- <img src="HairSalon/wwwroot/img/Table.jpg">   -->
   
 </div>
 
@@ -94,7 +92,8 @@ CREATE TABLE `clients` (
 
 ## Known Bugs
 
-* _N/A_
+* _Routing is correct but receiving below issue_
+* _MySqlException: Host 'DESKTOP-PR6V7L8' is not allowed to connect to this MySQL server_
 
 ## License
 
