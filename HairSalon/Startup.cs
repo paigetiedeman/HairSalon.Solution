@@ -8,13 +8,13 @@ using HairSalon.Models;
 
 namespace HairSalon
 {
-  public class Startup
+public class Startup
   {
     public Startup(IWebHostEnvironment env)
     {
       var builder = new ConfigurationBuilder()
-          .SetBasePath(env.ContentRootPath)
-          .AddEnvironmentVariables();
+        .SetBasePath(env.ContentRootPath)
+        .AddJsonFile("appsettings.json");
       Configuration = builder.Build();
     }
 
@@ -23,7 +23,7 @@ namespace HairSalon
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddMvc();
-
+      
       services.AddEntityFrameworkMySql()
         .AddDbContext<HairSalonContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
