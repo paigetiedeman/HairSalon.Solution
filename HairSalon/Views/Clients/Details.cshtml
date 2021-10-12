@@ -4,10 +4,12 @@
 
 @model HairSalon.Models.Client
 
-<h3>Client Details</h3>
-<hr>
+<div class="jumbotron">
+  <h3>Client Details</h3>
+  <hr>
+</div>
 
-@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+<li>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</li>
 
 <br>
 

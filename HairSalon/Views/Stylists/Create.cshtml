@@ -4,8 +4,10 @@
 
 @model HairSalon.Models.Stylist
 
-<h3>Add a New Stylist</h3>
-<hr>
+<div class="jumbotron">
+  <h3>Add a New Stylist</h3>
+  <hr>
+</div>
 
 @using (Html.BeginForm())
 {
@@ -16,5 +18,4 @@
   <input type="submit" value="Add New Stylist" class="btn btn-light"/>
 }
 
-<br>
 <p class="btn btn-light">@Html.ActionLink("Show All Stylists", "Index")</p>

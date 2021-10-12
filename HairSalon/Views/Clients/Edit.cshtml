@@ -4,9 +4,10 @@
 
 @model HairSalon.Models.Client
 
-<h3>Edit this Client: @Html.DisplayFor(model => model.Name)</h3>
-<hr>
-
+<div class="jumbotron">
+  <h3>Edit this Client: @Html.DisplayFor(model => model.Name)</h3>
+  <hr>
+</div>
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
@@ -18,5 +19,4 @@
   <input type="submit" value="Save" class="btn btn-light" />
 }
 
-<br>
 <p class="btn btn-light">@Html.ActionLink("Back to List", "Index")</p>
