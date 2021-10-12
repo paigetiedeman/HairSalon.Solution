@@ -3,7 +3,7 @@
 }
 
 @model HairSalon.Models.Stylist
-@using HairSalon.Models;
+
 
 <div class="jumbotron">
   <h3>Stylist Details</h3>
@@ -11,6 +11,8 @@
 </div>
 
 <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
+
+  <li>@Html.DisplayFor(model => model.StylistLevel)</li>
 
 <p class="btn btn-light">@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
 <p class="btn btn-light">@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>

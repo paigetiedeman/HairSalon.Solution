@@ -3,7 +3,6 @@
 }
 
 @using HairSalon.Models;
-@model List<HairSalon.Models.Client>;
 
 <div class="jumbotron">
   <h1>Client List:</h1>
@@ -12,12 +11,12 @@
 
 @if (@Model.Count == 0)
 {
-  <h3>No Clients have been added!</h3>
+  <h4>No Clients have been added!</h4>
 }
 
 @foreach (Client client in Model)
 {
-  <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist.Name </li>
+  <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Service </li>
 }
 
 <br>

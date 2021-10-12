@@ -9,6 +9,5 @@ namespace HairSalon.Models
     public string StylistLevel { get; set; }
     public int ClientId { get; set; }
     public virtual Client Client { get; set; }
-    public virtual ICollection<Client> Clients { get; set; }
   }
 }

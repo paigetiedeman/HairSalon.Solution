@@ -14,6 +14,17 @@
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @required = "required" })
 
+  <div class="form-group">
+    @Html.LabelFor(model => model.StylistLevel)
+    @Html.DropDownList("StylistLevel", new List<SelectListItem> {
+      new SelectListItem { Text = "Level 1", Value = "🟣"},
+      new SelectListItem { Text = "Level 2", Value = "🟣🟣"},
+      new SelectListItem { Text = "Level 3", Value = "🟣🟣🟣"},
+      new SelectListItem { Text = "Level 4", Value = "🟣🟣🟣🟣"},
+      new SelectListItem { Text = "Level 5", Value = "🟣🟣🟣🟣🟣"}, 
+      }, new { @class = "form-control"})
+  </div>
+
   <br>
   <input type="submit" value="Add New Stylist" class="btn btn-light"/>
 }
