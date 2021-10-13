@@ -14,6 +14,9 @@
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @required = "required" })
 
+  @Html.LabelFor(model => model.Client)
+  @Html.DropDownList("ClientId", null, new { @class = "form-control" })
+
   <div class="form-group">
     @Html.LabelFor(model => model.StylistLevel)
     @Html.DropDownList("StylistLevel", new List<SelectListItem> {
@@ -30,3 +33,4 @@
 }
 
 <p class="btn btn-light">@Html.ActionLink("Show All Stylists", "Index")</p>
+<p class="btn btn-light">@Html.ActionLink("Show all Clients", "Index", "Clients")</p>

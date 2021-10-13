@@ -18,8 +18,8 @@
 <ul>
   @foreach(Stylist stylist in Model)
   {
-    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId }) | @stylist.StylistLevel </li>
-  }
+    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId }) | @stylist.StylistLevel | @stylist.Client.Name</li>
+    }
 </ul>
 
 <p class="btn btn-light">@Html.ActionLink("Add New Stylist", "Create")</p>

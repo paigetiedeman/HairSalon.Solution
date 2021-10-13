@@ -2,7 +2,8 @@
   Layout = "_Layout";
 }
 
-@model HairSalon.Models.Stylist
+@using HairSalon.Models;
+@model HairSalon.Models.Stylist;
 
 
 <div class="jumbotron">
@@ -12,7 +13,19 @@
 
 <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
 
-  <li>@Html.DisplayFor(model => model.StylistLevel)</li>
+  <li>Stylist Level: @Html.DisplayFor(model => model.StylistLevel)</li>
+  @if (@Models.Count == 0)
+  {
+    <ol>
+      <li>No Clients have been added!</li>
+    </ol>
+  }
+  @foreach (Client client in Models)
+  {
+  <ol>
+    <li>@client.Name</li>
+  </ol>
+  }
 
 <p class="btn btn-light">@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
 <p class="btn btn-light">@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
