@@ -14,16 +14,11 @@
 <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
 
   <li>Stylist Level: @Html.DisplayFor(model => model.StylistLevel)</li>
-  @if (@Models.Count == 0)
-  {
-    <ol>
-      <li>No Clients have been added!</li>
-    </ol>
-  }
-  @foreach (Client client in Models)
+
+  @foreach (Client client in Model.Clients)
   {
   <ol>
-    <li>@client.Name</li>
+    <li>@Html.ActionLink(client.Name, "Details", "Clients", new { id = client.ClientId })</li>
   </ol>
   }
 
