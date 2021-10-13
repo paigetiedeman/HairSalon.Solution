@@ -17,6 +17,8 @@
 
 <br>
   
+  <img src="HairSalon/wwwroot/img/RelationshipTable.png">
+
 </div>
 
 ## Technologies Used
@@ -27,6 +29,7 @@
 * MSTest
 * HTML 
 * Bootstrap
+* CSS
 * MySQL Workbench
 * Entity
 
@@ -64,12 +67,14 @@ DROP TABLE IF EXISTS `stylists`;
 CREATE TABLE `stylists` (
   `StylistId` int NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
+  `StylistLevel` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`StylistId`)
 );
 DROP TABLE IF EXISTS `clients`;
 CREATE TABLE `clients` (
   `ClientId` int NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
+  `Service` varchar(255) DEFAULT NULL,
   `StylistId` int DEFAULT '0',
   PRIMARY KEY (`ClientId`)
 );
@@ -83,17 +88,17 @@ CREATE TABLE `clients` (
 ## User Stories
 
 <details>
+<summary>As the salon owner...</summary>
 
-* As the salon owner, I need to be able to see a list of all stylists.
-* As the salon owner, I need to be able to select a stylist, see their details, and see a list of all clients that belong to that stylist.
-* As the salon owner, I need to add new stylists to our system when they are hired.
-* As the salon owner, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.
+* I need to be able to see a list of all stylists.  
+* I need to be able to select a stylist, see their details, and see a list of all clients that belong to that stylist.  
+* I need to add new stylists to our system when they are hired.  
+* I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.  
 </details>
 
 ## Known Bugs
 
-* _Routing is correct but receiving below issue_
-* _MySqlException: Host 'DESKTOP-PR6V7L8' is not allowed to connect to this MySQL server_
+* _N/A_
 
 ## License
 
